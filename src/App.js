@@ -8,8 +8,8 @@ function App() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
     const fetch = async () => {
-      setUsers(await fetchFreelancers());
       try {
+        setUsers(await fetchFreelancers());
       } catch (err) {
         console.log(err);
       }
